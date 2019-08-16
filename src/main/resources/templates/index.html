@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{js/mine.js}" type="text/javascript"></script>
+    <link th:href="@{css/mine.css}" rel="stylesheet"/>
+</head>
+<body onload="f()">
+hello内部
+<h1 th:text="${key}">数据</h1>
+<table>
+    <tr th:each="trh:${list}">
+        <td th:text="${trh}"></td>
+    </tr>
+</table>
+<img src="images/qwe.jpg" style="width: 50px;height: 50px;"/>
+<img th:src="@{images/qwe.jpg}" style="width: 50px;height: 50px;"/>
+</body>
+</html>
